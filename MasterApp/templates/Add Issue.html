@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+{% block title %} {{ title }} {% endblock title %}
+
+<!--======================= Register Start-->
+{% block registration %}
+
+<div class="login-form-area mg-t-30 mg-b-15">
+<div class="container-fluid">
+<form method="post">{% csrf_token %}
+<div class="row">
+    <div class="col-lg-6">
+
+        <div class="sparkline12-hd">
+        <div class="main-sparkline12-hd">
+        <h1> {{ title }} </h1>
+        <div class="sparkline12-outline-icon">
+            <span class="sparkline12-collapse-link"><i class="fa fa-chevron-up"></i></span>
+            <span><i class="fa fa-wrench"></i></span>
+            <span class="sparkline12-collapse-close"><i class="fa fa-times"></i></span>
+        </div>
+        </div>
+        </div>
+        <div class="sparkline12-graph">
+
+
+                        <div class="input-knob-dial-wrap">
+                         <div class="row">
+                            <div class="col-lg-3">
+                                <div class="input-mask-title">
+                                    <label>Project Name</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-9">
+                                <div class="input-mark-inner mg-b-22">
+                                    <select name="project" class="form-control">
+                                        {% for p in Proj %}
+                                        <option value="{{ p.id }}">{{ p.Name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="input-mask-title">
+                                    <label>Employee</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-9">
+                                <div class="input-mark-inner mg-b-22">
+                                    <select name="employee" class="form-control">
+                                        {% for e in Emp %}
+                                        <option value="{{ e.id }}"> {{ e.Name }}</option>
+                                        {% endfor %}
+                                     </select>
+                                </div>
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                            <div class="row">
+                            <div class="col-lg-3">
+                                <div class="input-mask-title">
+                                    <label>Due Date</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="input-mark-inner mg-b-22">
+                                    <input type="date" name="Due_date" class="form-control"  data-mask="99/99/9999" placeholder="">
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="input-mask-title">
+                                    <label>Issue</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="input-mark-inner mg-b-22">
+                                    <textarea  name="Issue" class="form-control"  placeholder=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!------------------------->
+
+                        <!------------------------->
+                        <div class="row">
+
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-9">
+                                <div class="input-mark-inner mg-b-22">
+                                    <button type="submit" class="btn btn-custon-rounded-four btn-success">Submit</button>
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                    <button type="reset" class="btn btn-custon-rounded-four btn-">Reset</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </div>
+            </div>
+
+
+
+
+<!--    <div class="col-lg-6">-->
+
+<!--            <div class="sparkline10-hd">-->
+<!--                <div class="main-sparkline10-hd">-->
+<!--                    <h1>Project List</h1>-->
+<!--                      <div class="sparkline10-outline-icon">-->
+<!--                        <a href="{% url 'Project_Task' %}">-->
+<!--                            <button type="button" class="btn btn-custon-rounded-two btn-primary">-->
+<!--                                View All-->
+<!--                            </button>-->
+<!--                        </a>-->
+<!--                        <span class="sparkline10-collapse-link"><i class="fa fa-chevron-up"></i></span>-->
+<!--                        <span><i class="fa fa-wrench"></i></span>-->
+<!--                        <span class="sparkline10-collapse-close"><i class="fa fa-times"></i></span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        <div class="sparkline10-graph">-->
+<!--                <div class="static-table-list">-->
+<!--                    <div class="row">-->
+<!--                            <div class="col-lg-6">-->
+<!--                                <div class="input-mask-title"><h5 align="center">Select Employee</h5>-->
+<!--                                    <select name="ProjectEmployee" class="form-control">-->
+<!--                                        {% for c in Emp %}-->
+<!--                                        <option {% if c.id == data.ProjectEmployee.id %} selected {% endif %} value="{{ c.id }}">{{ c.Name }}</option>-->
+<!--                                        {% endfor %}-->
+<!--                                     </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-lg-6">-->
+<!--                                <div class="input-mask-title"><h5 align="center">Assign Task</h5>-->
+<!--                                    <input type="text" name="Task" class="form-control" data-mask="99/99/9999" placeholder="">-->
+<!--                                </div>-->
+<!--                                <span class="help-block"></span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+
+<!--                </div>-->
+<!--            </div>-->
+</form>
+        </div>
+</div>
+
+</div>
+</div>
+
+{% endblock registration %}
+<!-- Register End-->

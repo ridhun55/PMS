@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+{% block title %} {{ title }} {% endblock title %}
+
+<!--======================= Register Start-->
+{% block registration %}
+<div class="login-form-area mg-t-30 mg-b-15">
+<div class="container-fluid">
+
+<div class="row">
+    <div class="col-lg-12">
+
+            <div class="sparkline10-hd">
+                <div class="main-sparkline10-hd">
+                    <h1>{{ title }}</h1>
+                      <div class="sparkline10-outline-icon">
+                        <a href="{% url 'AddIssue' %}">
+                            <button type="button" class="btn btn-custon-rounded-two btn-primary">
+                                Add Issue
+                            </button>
+                        </a>
+                        <span class="sparkline10-collapse-link"><i class="fa fa-chevron-up"></i></span>
+                        <span><i class="fa fa-wrench"></i></span>
+                        <span class="sparkline10-collapse-close"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sparkline10-graph">
+                <div class="static-table-list">
+                    <table class="table border-table">
+                        <thead>
+                            <tr>
+                                <th>Roll</th>
+                                <th>Project</th>
+                                <th>Employee</th>
+<!--                                <th>Task</th>-->
+                                <th>Issue</th>
+                                <th>Status</th>
+                                <th>Due_date</th>
+                                <th>Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in data %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ i.ProjectName.Name }}</td>
+                                <td>{{ i.ProjectEmployee.Name }}</td>
+<!--                                <td>{{ i.Issue_Task.Task }}</td>-->
+                                <td>{{ i.Issues }}</td>
+                                <td>{{ i.Issue_Status }}</td>
+                                <td>{{ i.Issue_Due_date }}</td>
+                                <th><a href="{% url 'AddIssue edit' i.id %}">Edit</a></th>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>
+
+</div>
+</div>
+
+{% endblock registration %}
+<!-- Register End-->

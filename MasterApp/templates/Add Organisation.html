@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+{% block title %} {{ title }} {% endblock title %}
+
+<!--======================= Register Start-->
+{% block registration %}
+<div class="login-form-area mg-t-30 mg-b-15">
+<div class="container-fluid">
+
+<div class="row">
+
+<div class="col-lg-12">
+<div class="sparkline12-hd">
+<div class="main-sparkline12-hd">
+<h1> {{ title }} </h1>
+<div class="sparkline12-outline-icon">
+<span class="sparkline12-collapse-link"><i class="fa fa-chevron-up"></i></span>
+<span><i class="fa fa-wrench"></i></span>
+<span class="sparkline12-collapse-close"><i class="fa fa-times"></i></span>
+</div>
+</div>
+</div>
+
+<div class="sparkline12-graph ">
+<div class="row">
+    <form method="post">{% csrf_token %}
+        <div class="input-knob-dial-wrap">
+            <div class="row">
+<!--===================================================================================-->
+<div class="col-lg-6">
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="input-mask-title">
+                <label>Owner</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="Owner" class="form-control" placeholder="Organisation Owner">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="input-mask-title">
+                <label>Mobile</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="Mobile" class="form-control" placeholder="Mobile">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="input-mask-title">
+                <label>Email</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="Email" class="form-control" placeholder="Email">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="input-mask-title">
+                <label>Website</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="Website" class="form-control" placeholder="Website">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="input-mask-title">
+                <label>Street</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="Street" class="form-control" placeholder="Street">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="input-mask-title">
+                <label>Country</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="Country" class="form-control" placeholder="Country">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="input-mask-title">
+                <label>State</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="State" class="form-control" placeholder="State">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="input-mask-title">
+                <label>Description</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <textarea name="Description" class="form-control" placeholder="Description"></textarea>
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--==================================================================================-->
+<!--===================================================================================-->
+<div class="col-lg-6">
+
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="input-mask-title">
+                <label>Person</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="Contacted_Person" class="form-control" placeholder="Contacted Person">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="input-mask-title">
+                <label> Phone</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="Phone" class="form-control" placeholder="Phone">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="input-mask-title">
+                <label>Fax</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="Fax" class="form-control" placeholder="Fax">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="input-mask-title">
+                <label>Industry</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <select name="Industry" class="form-control">
+                    {% for i in Ind %}
+                        <option value="{{ i.id }}"> {{ i.industry }}</option>
+                    {% endfor %}
+                </select>
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="input-mask-title">
+                <label>City</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="City" class="form-control" placeholder="City">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="input-mask-title">
+                <label>Zipcode</label>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <input type="text" name="Zipcode" class="form-control" placeholder="Zipcode">
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+            <div class="input-mark-inner mg-b-22">
+                <button type="submit" class="btn btn-custon-rounded-four btn-success">Submit</button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <button type="reset" class="btn btn-custon-rounded-four btn-">Reset</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!--==================================================================================-->
+            </div>
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+{% endblock registration %}
+<!-- Register End-->
